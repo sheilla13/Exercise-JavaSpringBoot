@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Category</title>
+</head>
+<body>
+<form th:action="@{/save}" method="GET">
+  ID :
+  <input type="text" th:field="*{id}" value=""><br>
+  Name :
+  <input type="text" th:field="*{name}" value=""><br>
+  <input type="submit" value="submit">
+</form>
+</body>
+</html>

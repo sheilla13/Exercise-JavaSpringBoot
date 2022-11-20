@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        input[type=text] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid CornflowerBlue;
+            border-radius: 4px;
+        }
+
+        input[type=submit]{
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<form th:action="@{/category/save}" method="post" th:object="${category}">
+    <label for="id">ID : </label><br>
+    <input type="hidden" th:field="*{id}" value="" id="id"><br>
+    <label for="name">Name : </label><br>
+    <input type="text" th:field="*{name}" value="" id="name"><br>
+    <input type="submit" value="Save Category">
+</form>
+
+</body>
+</html>
